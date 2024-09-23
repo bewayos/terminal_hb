@@ -1,14 +1,16 @@
-document.getElementById('birthdateInput').addEventListener('keydown', function(event) {
+const correctDate = '2000-01-01'; // Change to the correct birthdate
+
+document.getElementById('input').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         const input = event.target.value;
-        const correctDate = '2000-01-01';  // Change to your friend's birthdate
-        
+        const outputElement = document.getElementById('output');
+
         if (input === correctDate) {
-            const greetingDiv = document.getElementById('greeting');
-            greetingDiv.textContent = 'Happy Birthday! 🎉';
-            greetingDiv.classList.remove('hidden');
+            outputElement.innerHTML += 'Happy Birthday! 🎉<br>';
         } else {
-            alert('Incorrect date! Please try again.');
+            outputElement.innerHTML += '> ' + input + '<br>Incorrect date! Please try again.<br>';
         }
+
+        event.target.value = ''; // Clear the input field after submission
     }
 });
