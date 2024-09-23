@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminal Greeting</title>
+    <title>Термінал</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="terminal">
-        <div class="output">
-            <span>Enter your birthdate (YYYY-MM-DD):</span>
-            <input type="text" id="birthdateInput" placeholder="YYYY-MM-DD" />
+    <div id="terminal">
+        <div id="output"></div>
+        <div id="input-line">
+            <span id="prompt">></span>
+            <input type="text" id="input" autofocus placeholder="YYYY-MM-DD">
         </div>
-        <div id="greeting" class="hidden"></div>
     </div>
     <script src="script.js"></script>
 </body>
